@@ -1,0 +1,33 @@
+.main-nav{
+    background-color:#0061C2;
+    height: 100px;
+    width: 100%;
+    display: flex;
+}
+
+.main-nav nav{
+    margin: auto;
+    width: 90%;
+    display: flex;
+}
+
+.main-nav {
+   margin: auto;
+}
+
+@media screen and (max-width: 1300px) {
+    .main-nav{
+        height: 510px;
+    }
+
+    .main-nav nav{
+        width: 300px;
+        margin: 10px auto;
+        display: grid;
+    }
+
+    .main-nav .nav-button{
+        margin: 10px;
+    }
+}
+

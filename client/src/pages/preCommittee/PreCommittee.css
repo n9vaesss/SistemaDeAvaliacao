@@ -1,0 +1,17 @@
+.main-precommittee{
+    display: grid;
+}
+
+.main-precommittee .main-precommittee-align{
+    width: 70%;
+    margin: auto;
+    text-align: center;
+}
+
+.main-precommittee .main-precommittee-align .input-search-precommittee{
+    padding: 8px;
+    font-size: 25px;
+    width: 50%;
+    border-radius: 10px;
+    margin-top: 20px;
+}

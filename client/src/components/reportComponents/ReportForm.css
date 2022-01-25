@@ -1,0 +1,47 @@
+.main-report-form{
+    display: flex;
+    width: 100%;
+}
+
+.main-report-form .report-form{
+    margin: 7% auto;
+    display: grid;
+    border: solid 2px black;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.main-report-form .report-form h1{
+    text-align: center;
+}
+
+
+.main-report-form .report-form .div-align-reg{
+    display: flex;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    padding: 5px;
+    margin: auto;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    width: 350px;
+    font-size: 23px;
+}
+
+.main-report-form .report-form .div-align-reg i{
+    opacity: 0.5;
+    padding: 5px;
+}
+
+.main-report-form .report-form .div-align-reg .input-report-form{
+    margin-left: 15px;
+    background: transparent;
+    border: none;
+    font-size: 20px;
+}
+
+@media screen and (max-width: 800px) {
+    .main-report-form .report-form{
+        width: 400px;
+    }
+}
+

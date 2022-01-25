@@ -1,0 +1,15 @@
+.container-left-login .image-bg{
+    width: 550px;
+    display: block;
+}
+
+.container-left-login .image-logo{
+    width: 450px;
+    margin-left: 50px;
+}
+
+@media screen and (max-width: 1000px) {
+    .container-left-login{
+        display: none;
+    }
+}

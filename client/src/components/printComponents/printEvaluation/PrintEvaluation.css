@@ -1,0 +1,23 @@
+.main-selfEvaluation{
+    margin: auto;
+}
+
+.print-info-main{
+    display: flex;
+    width: 600px;
+
+}
+
+.print-info-main .print-info-line1{
+    display: flex;
+}
+
+.print-info-main .print-info-line1 h1{
+    margin-top: 15px;
+    font-size: 20px;
+}
+
+.print-info-main .print-info-line1 p{
+    font-size: 20px;
+    padding: 15px;
+}

@@ -1,0 +1,54 @@
+.main-form-login{
+    margin: auto;
+}
+
+.main-form-login .form-login{
+    display: grid;
+}
+
+.main-form-login .form-login .image-avatar{
+    margin: auto;
+    width:100px ;
+}
+
+.main-form-login .form-login .title-login{
+    margin: 30px;
+	color: #333;
+	text-transform: uppercase;
+	font-size: 2.9rem;
+    width: 470px;
+    text-align: center;
+}
+
+.main-form-login .form-login .div-align-regpass{
+    display: flex;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    padding: 5px;
+    margin:10px auto;
+    width: 350px;
+    font-size: 23px;
+}
+
+.main-form-login .form-login .div-align-regpass i{
+    opacity: 0.5;
+    padding: 5px;
+}
+
+.main-form-login .form-login .div-align-regpass .field-regpass{
+    border: none;
+    font-size: 20px;
+}
+
+@media screen and (max-width: 1000px) {
+    .main-form-login{
+        margin: 1px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .main-form-login .form-login .title-login{
+        margin: 0px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}

@@ -1,0 +1,37 @@
+.main-print{
+    display: flex;
+    width: 70%;
+    margin: 0px 50px;
+}
+
+.main-print .img-escutcheon-print{
+    position: absolute;
+    width: 300px;
+    top: 880px;
+    left: 480px;
+    z-index: 1;
+}
+
+.main-print .align-print{
+    width: 60%;
+    margin-left: 15%;
+    z-index: 3;
+}
+
+
+.main-print .align-print .name-print{
+    width: 600px;
+    padding: 5px;
+    font-size: 25px;
+}
+
+.align-evaluation{ grid-area: spacetwo; }
+
+.main-print .align-print .align-print-grid-container{
+    display: grid;
+    grid-template-areas: 'spaceone spacetwo' ;
+}
+
+.main-print .align-print .align-print-grid-container .align-namesprint{
+   width: 140px; 
+}

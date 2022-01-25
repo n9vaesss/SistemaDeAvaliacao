@@ -1,0 +1,30 @@
+.div-main-commitee{
+    display: flex;
+    width: 60%;
+    margin: 20px auto;
+}
+
+.form-committe p{
+    padding: 20px;
+    font-size: 20px;
+}
+.form-committe label{
+    padding: 10px;
+    text-align: inherit;
+    font-size: 17px;
+}
+
+.form-committe .field-form-committe{
+    margin: 20px;
+}
+
+.div-info-committee{
+    width: 60%;
+    margin: 20px auto;
+}
+
+@media screen and (max-width: 1000px) {
+    .div-main-commitee{
+        width: 90%;
+    }
+}

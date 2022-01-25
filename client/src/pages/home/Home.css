@@ -1,0 +1,36 @@
+.main-home{
+    display: flex;
+    margin-top: 30px;
+}
+
+.main-home .logo-home{
+    width: 500px;
+    margin: auto;
+}
+
+.container-text-home{
+    display: grid;
+}
+
+.container-text-home h1{
+    padding-top: 10px;
+    margin: auto;
+}
+
+.container-text-home p{
+    padding-top: 30px;
+    width: 800px;
+    text-align: justify;
+    margin: 30px auto;
+}
+
+@media screen and (max-width: 870px) {
+    .container-text-home p{
+        width: 400px;
+    }
+
+    .container-text-home h1{
+        text-align: center;
+        margin: auto;
+    }
+}
