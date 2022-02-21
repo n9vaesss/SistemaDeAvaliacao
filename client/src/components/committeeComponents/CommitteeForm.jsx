@@ -3,6 +3,7 @@ import React, {useState} from 'react'
 import { useHistory } from 'react-router';
 import { useCookies } from "react-cookie";
 
+
 import Axios from "axios";
 import Questions from '../questionComponents/Questions';
 
@@ -14,7 +15,7 @@ const CommitteeForm = (props) =>{
     const [cookies, setCookie, removeCookie] = useCookies(["regComi, registry"]);
 
     function provideInfo (ino, dis, ass, comp, flex, prep, rel, plan, pont, cont){
-        Axios.post("http://localhost:3001/insertCommittee",{
+        Axios.post("http://172.22.10.83:3334/insertCommittee",{
             registry: cookies.registry,
             ino:ino,
             dis:dis, 
@@ -29,7 +30,7 @@ const CommitteeForm = (props) =>{
             regcommittee: cookies.regComi,
         })
         
-        Axios.put("http://localhost:3001/updateChecklistCommittee",{
+        Axios.put("http://172.22.10.83:3334/updateChecklistCommittee",{
             regcommittee: cookies.regComi,
 
         }).then((response) =>{

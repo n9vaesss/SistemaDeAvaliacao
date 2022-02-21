@@ -19,7 +19,7 @@ const Result = (props) =>{
 
     return(
         <div>
-            <p className = "pline" >{result}</p>
+            <p className= {props.class}>{result}</p>
         </div>
     )
 }

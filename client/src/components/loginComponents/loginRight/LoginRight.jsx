@@ -14,11 +14,10 @@ const LoginRight = (props) => {
     const [cookies, setCookie] = useCookies(["registry, permission, checkEva"]);
 
     const handleClickLogin = (registry, password) =>{
-        Axios.post("http://localhost:3001/login",{
+        Axios.post("http://172.22.10.83:3334/login",{
             registry:registry,
             password:password,
         }).then((response) =>{
-                console.log(response.data.msg)
             if( response.data.msg == 0 ){
                 alert("Usuario ou senha incorreta");
             }else{
@@ -28,7 +27,7 @@ const LoginRight = (props) => {
             }
         })
 
-        Axios.post("http://localhost:3001/checklist",{
+        Axios.post("http://172.22.10.83:3334/checklist",{
             registry:registry,
         }).then((response) =>{
             try{

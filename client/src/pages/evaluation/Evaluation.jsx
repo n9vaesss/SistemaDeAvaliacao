@@ -25,7 +25,7 @@ const Evaluation = props =>{
             history.push('/home')
         }
 
-        Axios.post("http://localhost:3001/InfoCommittee",{
+        Axios.post("http://172.22.10.83:3334/InfoCommittee",{
             regcommittee: cookies.regEva,
         }).then((response) =>{
             setListInfo(response.data)

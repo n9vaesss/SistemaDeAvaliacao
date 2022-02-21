@@ -8,7 +8,7 @@ import './Nav.css'
 
 const Nav = (props) =>{
 
-    const [cookies, setCookie, removeCookie] = useCookies(["registry, searchReportsuperior, searchReport, totalSelf, totalCommitte, totalEvaluation, regComi, regEva, permission, checkEva"]);
+    const [cookies, setCookie, removeCookie] = useCookies(["registry, searchReportsuperior, searchReport, totalSelf, totalCommitte, totalEvaluation, regComi, regEva, permission, checkEva, regEdit"]);
 
     let history = useHistory()
 
@@ -48,7 +48,13 @@ const Nav = (props) =>{
         }
     }
     const handleSubmitPainel = () =>{
-
+        if(cookies.permission != 3){
+            alert('Nivel de acesso negado!')
+            history.push('/home')
+        }else{
+            history.push('/optionsCRUD');
+        }
+        
     }
     const handleSubmitSair = () =>{
         removeCookie("registry"); 
@@ -60,7 +66,8 @@ const Nav = (props) =>{
         removeCookie("regComi");
         removeCookie("regEva");   
         removeCookie("permission"); 
-        removeCookie("checkEva"); 
+        removeCookie("checkEva");
+        removeCookie("regEdit");  
         history.push('/');
     }
 

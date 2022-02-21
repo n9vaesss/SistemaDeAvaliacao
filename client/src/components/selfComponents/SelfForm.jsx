@@ -13,7 +13,7 @@ const SelftForm = (props) =>{
     const [cookies, setCookie, removeCookie] = useCookies(["registry"]);
 
     function provideInfo (ino, dis, ass, comp, flex, prep, rel, plan, pont, cont){
-        Axios.post("http://localhost:3001/insertSelf",{
+        Axios.post("http://172.22.10.83:3334/insertSelf",{
             registry: cookies.registry,
             ino:ino,
             dis:dis, 
@@ -27,7 +27,7 @@ const SelftForm = (props) =>{
             cont: cont,
         })
         
-        Axios.put("http://localhost:3001/updateChecklistSelf",{
+        Axios.put("http://172.22.10.83:3334/updateChecklistSelf",{
             registry: cookies.registry,
 
         }).then((response) =>{

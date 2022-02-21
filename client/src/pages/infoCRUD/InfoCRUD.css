@@ -1,0 +1,93 @@
+.fieldName{grid-area: name;}
+.fieldRegistry{grid-area: registry;}
+.fieldCpf{grid-area: cpf;}
+.fieldCargo{grid-area: cargo;}
+.fieldEmprego{grid-area: emprego;}
+.fieldSecretaria{grid-area: secretaria;}
+.fieldDt_adm{grid-area: dt_adm;}
+.fieldSuperior{grid-area: superior;}
+.fieldSuperior_1{grid-area: superior_1;}
+.fieldSuperior_2{grid-area: superior_2;}
+.fieldCargo_origem{grid-area: cargo_origem;}
+.fieldLocal_trabalho{grid-area: local_trabalho;}
+.fieldDt_ava_ano{grid-area: dt_ava_ano;}
+
+.span-name{grid-area: span-name;}
+.span-registry{grid-area: span-registry;}
+.span-cpf{grid-area: span-cpf;}
+.span-cargo{grid-area: span-cargo;}
+.span-emprego{grid-area: span-emprego;}
+.span-secretaria{grid-area: span-secretaria;}
+.span-dt_adm{grid-area: span-dt_adm;}
+.span-superior{grid-area: span-superior;}
+.span-superior_1{grid-area: span-superior_1;}
+.span-superior_2{grid-area: span-superior_2;}
+.span-cargo_origem{grid-area: span-cargo_origem;}
+.span-local_trabalho{grid-area: span-local_trabalho;}
+.span-dt_ava_ano{grid-area: span-dt_ava_ano;}
+.span-empty{grid-area: span-empty;}
+
+.button-infoCRUD{grid-area: button;}
+
+.div-main-infocrud{
+    margin: 50px auto;
+    max-width: 70%;
+}
+
+.div-main-infocrud h1{
+    margin: 20px;
+    text-align: center;
+}
+
+.div-main-infocrud .div-grid-form{
+    display: grid;
+    grid-template-areas:
+    'span-name span-name span-name span-name span-registry'
+    'name name name name registry'
+
+    'span-cpf span-cpf span-cargo span-cargo span-cargo'
+    'cpf cpf cargo cargo cargo'
+
+    'span-secretaria span-secretaria span-secretaria span-cargo_origem span-cargo_origem'
+    'secretaria secretaria secretaria cargo_origem cargo_origem'
+
+    'span-superior span-superior_1 span-superior_1 span-superior_2 span-superior_2'
+    'superior  superior_1 superior_1 superior_2 superior_2'
+
+    'span-dt_ava_ano span-dt_adm span-dt_adm span-local_trabalho span-emprego'
+    'dt_ava_ano dt_adm dt_adm local_trabalho emprego'
+
+    'span-empty span-empty span-empty span-empty button'
+    ;
+}
+
+.div-main-infocrud .div-grid-form span{
+    padding: 10px 0px 10px 0px;
+    font-weight: bold;
+}
+
+.div-main-infocrud .div-grid-form input{
+    padding: 10px;
+    border-radius: 5px;
+    border-width: 1px;
+    margin: 0px 10px 0px 0px;
+}
+
+.div-main-infocrud .div-grid-form .button-infoCRUD{
+    color: white;
+    height: 80px;
+    font-size: 17px;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #3A7EC2;
+    transition: 300ms;
+    margin-top: 50px;
+}
+
+.div-main-infocrud .div-grid-form .button-infoCRUD:hover{
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+

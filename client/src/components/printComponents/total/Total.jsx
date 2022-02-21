@@ -8,7 +8,7 @@ const Total = props =>{
 
     const [cookies, setCookie] = useCookies([" totalSelf, totalEvaluation, totalCommitte"]);
 
-    const [total, settotal] = useState(( parseInt(cookies.totalSelf) + parseInt(cookies.totalEvaluation) + parseInt(cookies.totalCommitte) ) / 3)
+    const [total, settotal] = useState(parseInt(cookies.totalCommitte))
     const [totalConcept, settotalConcept] = useState ("")
 
     useEffect(() =>{

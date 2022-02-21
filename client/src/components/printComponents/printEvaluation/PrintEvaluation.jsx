@@ -26,7 +26,7 @@ const PrintSelftEvaluation = (props) => {
     ]
 
     const vetor = vets.map(vet => {
-        return <Result value={vet} />
+        return <Result value={vet} class = {"pline"} />
     })
     
     setCookie(props.nameTotal, props.total, { path: "/" });

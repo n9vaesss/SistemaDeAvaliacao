@@ -28,7 +28,7 @@ const Report = () =>{
 
         setCookie("searchReport", searchReport, { path: "/" });
 
-        Axios.post("http://localhost:3001/searchReportsuperior",{
+        Axios.post("http://172.22.10.83:3334/searchReportsuperior",{
             searchReport: searchReport,
         }).then((response) =>{
 

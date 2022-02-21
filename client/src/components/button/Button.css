@@ -56,3 +56,21 @@
 	transition: .5s;
 	text-align: center;
 }
+
+.button-optionsCRUD{
+	color: white;
+	width: 400px;
+	height: 100px;
+    font-size: 17px;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #3A7EC2;
+    transition: 300ms;
+	margin: auto;
+}
+
+.button-optionsCRUD:hover{
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}

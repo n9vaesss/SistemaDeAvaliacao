@@ -19,7 +19,6 @@ const ReportForm = (props) => {
     const validationReport = yup.object().shape({
         searchReport: yup
             .string()
-            .min(4, "Deve haver no mínimo 4 dígitos")
             .required("Campo obrigatório"),
     })
 

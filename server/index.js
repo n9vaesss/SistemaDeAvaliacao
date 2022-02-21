@@ -3,17 +3,18 @@ const app = express();
 const mysql = require("mysql");
 const cors = require("cors");
 
-const db = mysql.createPool({
-    host: "localhost",
+const db = mysql.createConnection({
+    host: "172.22.10.82",
     user: "root",
     password: "",
     database: "bd_pesquisa",
+    port: "3306",
 })
 
 app.use(express.json());
 app.use(cors());
 
-/*---------------------------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------- -------------------------------------------*/
 
 app.post("/login", (req, res) => {
     const registry = req.body.registry
@@ -303,7 +304,77 @@ app.post("/checklist", (req, res) => {
 
 /*---------------------------------------------------------------------------------------------------------------------------*/
 
+app.post("/searchCRUD", (req, res) => {
 
-app.listen(3001, () => {
-    console.log("Rodando na porta 3001")
+    const params = req.body.params
+
+    db.query(" SELECT * FROM servidores JOIN checklist ON registro_id_pk = id_func_fk WHERE serv_nome LIKE ?  OR  serv_secretaria LIKE ?  OR registro_id_pk LIKE ? ", [params, params, params], (err, result) =>{
+        if(err){
+            res.send(err);
+        }else{
+        res.send(result)
+        }
+    })
+})
+
+/*---------------------------------------------------------------------------------------------------------------------------*/
+
+app.post("/InfoCRUD", (req, res) => {
+
+    const regEdit = req.body.regEdit
+
+    db.query(" SELECT * FROM servidores WHERE registro_id_pk = ?", [regEdit], (err, result) =>{
+        if(err){
+            res.send(err);
+        }else{ 
+        res.send(result)
+        }
+    })
+})
+
+/*---------------------------------------------------------------------------------------------------------------------------*/
+
+app.put("/managerUpdate", (req, res) => {
+
+    const regEdit = req.body.regEdit
+    const name = req.body.name
+    const cargo = req.body.cargo
+    const emprego = req.body.emprego
+    const secretaria = req.body.secretaria
+    const superior = req.body.superior
+    const superior_1 = req.body.superior_1
+    const superior_2 = req.body.superior_2
+    const cargo_origem = req.body.cargo_origem
+    const local_trabalho = req.body.local_trabalho
+    const dt_ava_ano = req.body.dt_ava_ano
+
+    db.query(" UPDATE servidores SET serv_nome = ?, serv_cargo = ?, serv_emprego = ?, serv_secretaria = ?, serv_superior = ?, serv_superior_1 = ?, serv_superior_2 = ?, serv_cargo_origem = ?, serv_local_trabalho = ?, serv_dt_ava_ano = ? WHERE registro_id_pk = ? ", [name, cargo, emprego, secretaria, superior, superior_1, superior_2, cargo_origem, local_trabalho, dt_ava_ano, regEdit], (err, result) =>{
+        if(err){
+            res.send(err);
+        }else{
+        res.send({msg: "Alterações salvas com sucesso!"})
+        }
+    })
+})
+
+/*---------------------------------------------------------------------------------------------------------------------------*/
+
+app.post("/InfoCommitteeEvaluation", (req, res) => {
+
+    const regEdit = req.body.searchReport
+
+    db.query(" SELECT * FROM servidor_caracteristicas WHERE sc_funcionario_avaliado <> registro_id_fk AND sc_funcionario_avaliado = ?", [regEdit], (err, result) =>{
+        if(err){
+            res.send(err);
+        }else{ 
+        res.send(result)
+        }
+    })
+})
+
+/*---------------------------------------------------------------------------------------------------------------------------*/
+
+
+app.listen(3334, () => {
+    console.log("Rodando na porta 3334")
 })

@@ -23,7 +23,7 @@ const PreEvaluation = props => {
 
         const params = '%' + search + '%';
 
-        Axios.post("http://localhost:3001/searchPreEvaluation",{
+        Axios.post("http://172.22.10.83:3334/searchPreEvaluation",{
             registry : cookies.registry,
             params : params,
         }).then((response) => {

@@ -21,12 +21,13 @@ const LoginForm = (props)  => {
     const validationLogin = yup.object().shape({
         registry: yup
         .string()
-        .min(4, "Deve haver no mínimo 4 dígitos")
-        .required("Campo obrigatório"),
+        .required("Campo obrigatório")
+        .max(11, "Deve haver no maximo 11 caracteres"),
         password: yup
         .string()
         .min(11, "Deve haver no mínimo 11 caracteres")
-        .required("Campo obrigatório"),
+        .required("Campo obrigatório")
+        .max(20, "Deve haver no maximo 20 caracteres"),
     })
 
 

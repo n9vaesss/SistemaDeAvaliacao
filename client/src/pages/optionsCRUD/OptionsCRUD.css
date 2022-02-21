@@ -1,0 +1,17 @@
+.main-optionsCRUD{
+    display: flex;
+}
+
+.text-optionsCRUD{
+    margin: 80px 0px 0px 0px;
+    text-align: center;
+}
+
+.main-optionsCRUD .align-optionsCRUD{
+    margin: 30px auto;
+}
+
+.main-optionsCRUD   .align-optionsCRUD button{
+    margin: 30px 0px;
+    display: block;
+}

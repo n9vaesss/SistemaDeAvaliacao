@@ -34,26 +34,26 @@ const Print = (props) => {
             history.push('/home')
         }
 
-        Axios.post("http://localhost:3001/printInformation", {
+        Axios.post("http://172.22.10.83:3334/printInformation", {
             searchReport: cookies.searchReport,
         }).then((response) => {
             setListprintInformation(response.data)
         })
 
-        Axios.post("http://localhost:3001/printSelftEvaluation", {
+        Axios.post("http://172.22.10.83:3334/printSelftEvaluation", {
             searchReport: cookies.searchReport,
         }).then((response) => {
             setListprintSelftEvaluation(response.data)
         })
 
-        Axios.post("http://localhost:3001/printEvaluation", {
+        Axios.post("http://172.22.10.83:3334/printEvaluation", {
             searchReport: cookies.searchReport,
             searchReportsuperior: cookies.searchReportsuperior,
         }).then((response) => {
             setListprintEvaluation(response.data)
         })
 
-        Axios.post("http://localhost:3001/printCommitteeEvaluation", {
+        Axios.post("http://172.22.10.83:3334/printCommitteeEvaluation", {
             searchReport: cookies.searchReport,
         }).then((response) => {
             setListprintCommitteeEvaluation(response.data)

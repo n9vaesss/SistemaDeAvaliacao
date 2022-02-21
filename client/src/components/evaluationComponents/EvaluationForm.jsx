@@ -14,7 +14,7 @@ const EvaluationForm = (props) =>{
     const [cookies, setCookie, removeCookie] = useCookies(["regEva, registry"]);
 
     function provideInfo (ino, dis, ass, comp, flex, prep, rel, plan, pont, cont){
-        Axios.post("http://localhost:3001/insertEvaluation",{
+        Axios.post("http://172.22.10.83:3334/insertEvaluation",{
             registry: cookies.registry,
             ino:ino,
             dis:dis, 
@@ -29,7 +29,7 @@ const EvaluationForm = (props) =>{
             regcommittee: cookies.regEva,
         })
         
-        Axios.put("http://localhost:3001/updateChecklistevaluation",{
+        Axios.put("http://172.22.10.83:3334/updateChecklistevaluation",{
             regcommittee: cookies.regEva,
 
         }).then((response) =>{
